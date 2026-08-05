@@ -1,0 +1,10 @@
+{
+  "name": "comprehension-checker",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Local-first Firefox comprehension quiz proof of concept",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "check": "node --check popup/quiz-generator.js && node --check popup/popup.js && node --check content/article-reader.js && npm test"
+  }
+}

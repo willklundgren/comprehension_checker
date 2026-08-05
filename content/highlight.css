@@ -1,0 +1,8 @@
+.comprehension-checker-highlight {
+  position: relative !important;
+  border-radius: 4px !important;
+  outline: 4px solid rgba(240, 168, 61, 0.72) !important;
+  outline-offset: 5px !important;
+  background-color: rgba(255, 224, 137, 0.38) !important;
+  transition: background-color 180ms ease !important;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Did You Really Get That?</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header class="brand">
+        <span class="brand-mark" aria-hidden="true">?</span>
+        <div>
+          <p class="eyebrow">COMPREHENSION CHECK</p>
+          <h1>Did you really get that?</h1>
+        </div>
+      </header>
+
+      <section id="start-view" class="view">
+        <p id="page-title" class="page-title">Reading this page…</p>
+        <p id="page-meta" class="muted">Finding the article text.</p>
+        <button id="start-button" class="primary" disabled>Make me a 3-question quiz</button>
+        <p class="privacy">Runs entirely in your browser for this prototype.</p>
+      </section>
+
+      <section id="quiz-view" class="view hidden" aria-live="polite">
+        <div class="progress-row">
+          <span id="progress-label">Question 1 of 3</span>
+          <span id="score-label"></span>
+        </div>
+        <div class="progress-track"><div id="progress-bar"></div></div>
+        <p id="question" class="question"></p>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback hidden">
+          <p id="feedback-title"></p>
+          <p id="evidence" class="evidence"></p>
+          <button id="show-source" class="secondary">Show me in the article</button>
+        </div>
+        <button id="next-button" class="primary hidden">Next question</button>
+      </section>
+
+      <section id="results-view" class="view hidden" aria-live="polite">
+        <div id="result-ring" class="result-ring"><span id="final-score">0/3</span></div>
+        <h2 id="result-title">Quiz complete</h2>
+        <p id="result-message" class="muted"></p>
+        <button id="retry-button" class="primary">Try another quiz</button>
+      </section>
+
+      <section id="error-view" class="view hidden">
+        <h2>Couldn’t quiz this page</h2>
+        <p id="error-message" class="muted"></p>
+      </section>
+    </main>
+    <script src="quiz-generator.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
